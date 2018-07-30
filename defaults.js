@@ -1,5 +1,1 @@
-let yargs = require('yargs'),
-
-argv = yargs.default('players','1').argv;
-
-console.log(argv.players);
+console.log(require('yargs').default('basic','true').argv.basic);

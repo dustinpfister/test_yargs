@@ -1,1 +1,1 @@
-console.log(require('yargs').argv.foo);
+console.log(require('yargs').argv.basic);
