@@ -1,12 +1,16 @@
 let yargs = require('yargs'),
 klaw = require('klaw'),
 
-argv = yargs.default('depth', '0').argv;
+argv = yargs
+    .command('html', 'walk for html', function (yargs) {
+    
 
-klaw('./',{
-    depthLimit: argv.depth
-}).on('data', function (item) {
+    }, function (yargs) {
 
-    console.log(item.path);
+        console.log(yargs.depth);
+		console.log(yargs.path);
 
-});
+    })
+    .option('depth', {alias: 'd',default:'0'})
+    .option('path', {alias: 'p',default:'./'})
+    .argv
