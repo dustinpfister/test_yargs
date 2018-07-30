@@ -4,6 +4,18 @@ path = require('path'),
 
 argv = yargs
 
+    .command({
+
+        command: '*',
+        handler: function () {
+
+            console.log('use the html command to walk');
+            console.log('walker html -p ./public -d 4');
+
+        }
+
+    })
+
     // html command
     .command({
         command: 'html',
